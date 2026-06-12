@@ -149,22 +149,37 @@ Place the downloaded files inside a folder named `netflix-prize-data` before run
 
 ## Architecture Design
 
-Netflix Dataset
-       │
-       ▼
-Data Processing
-       │
-       ▼
-User-Movie Matrix
-       │
- ┌─────┴─────┐
- ▼           ▼
-Item-CF      SVD
- ▼           ▼
-Evaluation
-       │
-       ▼
-Recommendations
+                     Netflix Prize Dataset
+                              │
+                              ▼
+                    Data Parsing & Cleaning
+                              │
+                              ▼
+                    Filtering & Sampling
+                (Active Users & Popular Movies)
+                              │
+                              ▼
+                     Exploratory Data Analysis
+                              │
+                              ▼
+                     Train-Test Split (80/20)
+                              │
+                ┌─────────────┴─────────────┐
+                │                           │
+                ▼                           ▼
+      Item-Based Collaborative      Matrix Factorization
+           Filtering (IBCF)               (SVD)
+                │                           │
+                ▼                           ▼
+       Rating Predictions          Rating Predictions
+                │                           │
+                └─────────────┬─────────────┘
+                              ▼
+                    Model Evaluation
+                  RMSE • MAE • MAP@10
+                              │
+                              ▼
+                 Personalized Recommendations
 
 
 ## How to Run
