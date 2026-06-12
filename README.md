@@ -212,7 +212,8 @@ The original competition dataset released by Netflix in 2006, containing 100M+ r
 
 ## Author
 
-Krish Kumar (proppls)
-Mohd Saif   (mdsaif1309-coder)
+Krish Kumar ( Githhub id - proppls)
+
+Mohd Saif   ( Githhub id - mdsaif1309-coder)
 
 Project submitted as part of the Recommendation Systems for Personalized Content Discovery problem statement.
