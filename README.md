@@ -147,6 +147,26 @@ Place the downloaded files inside a folder named `netflix-prize-data` before run
 
 \---
 
+## Architecture Design
+
+Netflix Dataset
+       │
+       ▼
+Data Processing
+       │
+       ▼
+User-Movie Matrix
+       │
+ ┌─────┴─────┐
+ ▼           ▼
+Item-CF      SVD
+ ▼           ▼
+Evaluation
+       │
+       ▼
+Recommendations
+
+
 ## How to Run
 
 Just open `Netflix_Recommendation_System.ipynb` in Google Colab and run the cells sequentially.
